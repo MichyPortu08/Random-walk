@@ -13,7 +13,7 @@ for i in range(n_simulazioni):
 
     esiti.append(1 if guadagno == RB else -1)
 
-plt.bar(range(1, n_simulazioni + 1), esiti, color=['green' if e == 1 else 'red' for e in esiti])
+plt.scatter(range(1, n_simulazioni + 1), esiti, marker='x', color=['green' if e == 1 else 'red' for e in esiti])
 plt.axhline(0, color='black', linewidth=0.8)
 plt.yticks([-1, 1], ['Banco vince (-1)', 'A vince (+1)'])
 plt.xlabel('Numero Partita')
